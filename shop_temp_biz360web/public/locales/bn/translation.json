@@ -1,0 +1,12 @@
+{
+  "//": "Login Page",
+  "login": "লগইন",
+  "username": "ব্যবহারকারীর নাম",
+  "ph_username": "ব্যবহারকারীর নাম..",
+  "err_msg_username": "ব্যবহারকারীর নাম প্রয়োজন",
+  "password": "পাসওয়ার্ড",
+  "ph_password": "পাসওয়ার্ড..",
+  "err_msg_password": "পাসওয়ার্ড প্রয়োজন",
+  "err_msg_password_length": "পাসওয়ার্ড কমপক্ষে ৫ অক্ষরের হতে হবে",
+  "iam_human": "আমি একজন মানুষ"
+}

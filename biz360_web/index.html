@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/banner-icon//icon-mini-biz360expo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/font.css" />
+    <link rel="stylesheet" href="/src/styles/flat-pickr.css" />
+
+    <title id="dynamic-title">Biz 360 Expo</title>
+    <script>
+      function updateTitle() {
+        const user_type = localStorage.getItem('user_type') || sessionStorage.getItem('user_type');
+        const titleElement = document.getElementById('dynamic-title');
+        
+        if (user_type === 'COM') {
+          titleElement.textContent = 'Biz 360 Expo – Company Admin';
+        } else {
+          titleElement.textContent = 'Biz 360 Expo – Member Admin';
+        }
+      }
+      
+      document.addEventListener('DOMContentLoaded', updateTitle);
+      window.addEventListener('storage', function(event) {
+        if (event.key === 'user_type') {
+          updateTitle();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
